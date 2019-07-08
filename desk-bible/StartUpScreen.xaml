@@ -17,5 +17,7 @@
         <TextBlock>Hello</TextBlock>
         <Button Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Width="32" Height="32" FontSize="16" 
                 VerticalAlignment="Center" HorizontalAlignment="Right" Background="White" Click="Button_Click" Margin="0,0,0,387">&gt;</Button>
+        <Button Content="Button" Grid.Column="1" HorizontalAlignment="Left" Margin="323,311,0,0" VerticalAlignment="Top" Width="75" Cursor="Hand" Click="Button_Click_1"/>
+        <Label x:Name="Label1" Content="Label" Grid.Column="1" HorizontalAlignment="Left" Margin="162,53,0,0" VerticalAlignment="Top" Height="190" Width="397"/>
     </Grid>
 </Window>
