@@ -23,7 +23,8 @@ namespace desk_bible
     public partial class MainWindow : Window
     {
         static HttpClient client = new HttpClient();
-        static string apiKey = "fbf98cac98b39e2faf6a6d9900d5f4a9";
+        static string apiKey = "e9df1c7284c5b62601e2ab4712fa2be6"; //Changed Key for DigitalBiblePlatform
+        static string baseUrl = "http://dbt.io/library/volumev=2&key=" + apiKey;
         public MainWindow()
         {
             InitializeComponent();
@@ -52,8 +53,8 @@ namespace desk_bible
         private static async Task<string> post()
         {
             string ret = "";
-            client.BaseAddress = new Uri("https://api.scripture.api.bible/v1/bibles");
-            client.DefaultRequestHeaders.Add("api-key", apiKey);
+            client.BaseAddress = new Uri(baseUrl);
+            //client.DefaultRequestHeaders.Add("api-key", apiKey);
             Console.WriteLine("about to send GET");
             HttpResponseMessage response = await client.GetAsync(client.BaseAddress);
             if (response.IsSuccessStatusCode)
